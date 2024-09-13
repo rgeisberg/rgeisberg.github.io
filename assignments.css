@@ -117,3 +117,19 @@ footer {
         margin: 5px 0;
     }
 }
+/* GitHub Link Button */
+a.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #24292e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a.github-button:hover {
+    background-color: #f055d4;
+}
