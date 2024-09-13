@@ -1,7 +1,4 @@
-/* Reset some default browser styles */
-
-
-/* Set base styles */
+/* Base styles for the page */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -9,11 +6,11 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    padding-top: 125px;
+    padding-top: 100px; /* To account for the fixed header height */
     padding-bottom: 100px;
 }
 
-/* Header styling */
+/* Header styling - standardized */
 header {
     background-color: #333;
     color: #fff;
@@ -29,6 +26,11 @@ header {
 
 header h1 {
     margin-bottom: 0.5rem;
+    font-size: 2rem; /* Standard font size */
+}
+
+nav {
+    margin-top: 0.5rem;
 }
 
 nav a {
@@ -36,6 +38,7 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
+    font-size: 1rem; /* Standard font size */
 }
 
 nav a:hover {
@@ -52,6 +55,38 @@ main {
     border-radius: 5px;
 }
 
+/* Assignments List Section */
+.assignments-list, .completed-assignments {
+    margin-bottom: 2rem;
+}
+
+.assignments-list h2, .completed-assignments h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.assignments-list ul, .completed-assignments ul {
+    list-style: none;
+    padding: 0;
+}
+
+.assignments-list li, .completed-assignments li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #eaeaea;
+    border-left: 5px solid #f055d4;
+    border-radius: 5px;
+}
+
+.assignments-list h3, .completed-assignments h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.assignments-list p, .completed-assignments p {
+    margin: 0.5rem 0;
+}
+
 /* Footer styling */
 footer {
     background-color: #333;
@@ -62,6 +97,7 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
+   
 }
 
 /* Responsive design */
@@ -73,6 +109,7 @@ footer {
     main {
         padding: 1rem;
         margin: 1rem;
+        padding-bottom: 100px; /* Maintain extra padding on small screens */
     }
 
     nav a {
@@ -80,12 +117,3 @@ footer {
         margin: 5px 0;
     }
 }
-.profile-pic {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
