@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact - Rebecca A Geisberg</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
-        <h1>Contact</h1>
+        <h1>Contact Rebecca A Geisberg</h1>
         <nav>
             <a href="index.html">Home</a> | 
             <a href="work-experience.html">Work Experience</a> |
@@ -17,7 +17,31 @@
         </nav>
     </header>
     <main>
-        <p>This page tells you more about us!</p>
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or would like to get in touch, feel free to reach out to me through any of the following methods:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:rgeis26@bu.edu">rgeis26@bu.edu</a></li>
+                <li><strong>Phone:</strong> +1 (781) 793 4021</li>
+                <li><strong>Location:</strong> Brookline, MA</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Rebecca A Geisberg</p>

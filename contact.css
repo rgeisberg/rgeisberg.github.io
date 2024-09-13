@@ -1,0 +1,156 @@
+/* Base styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+}
+
+/* Header styling - standardized */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem; /* Standard font size */
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 1rem; /* Standard font size */
+}
+
+nav a:hover {
+    color: #f055d4;
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-bottom: 100px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #f055d4;
+}
+
+/* Contact Form Section */
+.contact-form {
+    margin-bottom: 2rem;
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #f055d4;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    header, footer {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+        margin: 1rem;
+        padding-bottom: 100px; /* Maintain extra padding on small screens */
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
