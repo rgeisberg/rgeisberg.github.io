@@ -6,7 +6,7 @@
     <title>My Simple Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
     <header>
         <h1>Rebecca A Geisberg</h1>
         <nav>
@@ -18,39 +18,50 @@
         </nav>
     </header>
     <main>
-        <section class="intro">
-            <img src="/images/selfie.jpeg" alt="A picture of Rebecca A Geisberg" class="profile-pic">
-            <div class="intro-copy">
-                <h2>About Me</h2>
-                <p>I am Rebecca Geisberg, a Boston University computer science student who enjoys building new projects, while simultaneously thinking about what could be better. My background includes teaching full stack web development, leading Java instruction for younger students, and extensive Machine Learning projects and mathematical background.</p>
-                <p>This site highlights the work I am doing as I continue to grow as a developer. If you want a closer look at what I have built, you can explore my projects page and reach out through the <a href="contact.html" class="inline-link">contact page</a>.</p>
-            </div>
-        </section>
+        <section class="tabbed-profile" data-reveal>
+            <div class="profile-carousel-shell" aria-label="Homepage section controls">
+                <button class="profile-arrow" type="button" aria-label="Previous section" data-carousel-direction="prev">&lt;</button>
 
-        <section class="info-section">
-            <h2>Skills</h2>
-            <ul class="info-list">
-                <li><strong>Programming:</strong> Python, Java, JavaScript, C, MySQL/SQL, React.js, Firebase, Flask, HTML, CSS</li>
-                <li><strong>Coursework and Technical Exposure:</strong> Machine Learning, kernel functions, advanced linear algebra, blockchain</li>
-                <li><strong>Computer Science Foundations:</strong> Computer architecture, systems programming, abstract models of computation, object-oriented design</li>
-                <li><strong>Languages:</strong> Advanced Hebrew</li>
-                <li><strong>Professional Skills:</strong> Public speaking, presentation, problem-solving, consensus building</li>
-            </ul>
-        </section>
+                <div class="profile-panel-stack">
+                    <section class="tab-panel intro is-active" id="panel-about" role="tabpanel" data-panel-label="About Me">
+                        <img src="/images/selfie.jpeg" alt="A picture of Rebecca A Geisberg" class="profile-pic">
+                        <div class="intro-copy">
+                            <h2>About Me</h2>
+                            <p>I am Rebecca Geisberg, a Boston University computer science student who enjoys building new projects, while simultaneously thinking about what could be better. My background includes teaching full stack web development, leading Java instruction for younger students, and extensive Machine Learning projects and mathematical background.</p>
+                            <p>This site highlights the work I am doing as I continue to grow as a developer. If you want a closer look at what I have built, you can explore my projects page and reach out through the <a href="contact.html" class="inline-link">contact page</a>.</p>
+                        </div>
+                    </section>
 
-        <section class="info-section">
-            <h2>Education</h2>
-            <div class="education-card">
-                <div class="education-copy">
-                    <h3>Boston University | Bachelor of Arts in Computer Science</h3>
-                    <p>Expected May 2026</p>
+                    <section class="tab-panel info-section" id="panel-skills" role="tabpanel" data-panel-label="Skills" hidden>
+                        <h2>Skills</h2>
+                        <ul class="info-list">
+                            <li><strong>Programming:</strong> Python, Java, JavaScript, C, MySQL/SQL, React.js, Firebase, Flask, HTML, CSS</li>
+                            <li><strong>Coursework and Technical Exposure:</strong> Machine Learning, kernel functions, advanced linear algebra, blockchain</li>
+                            <li><strong>Computer Science Foundations:</strong> Computer architecture, systems programming, abstract models of computation, object-oriented design</li>
+                            <li><strong>Languages:</strong> Advanced Hebrew</li>
+                            <li><strong>Professional Skills:</strong> Public speaking, presentation, problem-solving, consensus building</li>
+                        </ul>
+                    </section>
+
+                    <section class="tab-panel info-section" id="panel-education" role="tabpanel" data-panel-label="Education" hidden>
+                        <h2>Education</h2>
+                        <div class="education-card">
+                            <div class="education-copy">
+                                <h3>Boston University | Bachelor of Arts in Computer Science</h3>
+                                <p>Expected May 2026</p>
+                            </div>
+                            <img src="images/boston-university-logo.png" alt="Boston University logo" class="education-logo">
+                        </div>
+                    </section>
                 </div>
-                <img src="images/boston-university-logo.png" alt="Boston University logo" class="education-logo">
+
+                <button class="profile-arrow" type="button" aria-label="Next section" data-carousel-direction="next">&gt;</button>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 Rebecca A Geisberg</p>
     </footer>
+    <script src="site.js" defer></script>
 </body>
 </html>

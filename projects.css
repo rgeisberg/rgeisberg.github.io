@@ -19,30 +19,43 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 116px;
+    padding-top: 148px;
     font-family: "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
     line-height: 1.7;
     color: var(--text);
     background:
-        radial-gradient(circle at top left, rgba(255, 205, 229, 0.75), transparent 28%),
-        radial-gradient(circle at top right, rgba(252, 221, 235, 0.8), transparent 24%),
+        linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at 12% 14%, rgba(255, 182, 213, 0.85), transparent 24%),
+        radial-gradient(circle at 84% 18%, rgba(248, 203, 224, 0.9), transparent 22%),
+        radial-gradient(circle at 70% 78%, rgba(225, 212, 255, 0.78), transparent 26%),
+        radial-gradient(circle at 28% 72%, rgba(255, 226, 236, 0.75), transparent 20%),
         linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+    background-size: 26px 26px, 26px 26px, auto, auto, auto, auto, auto;
+    background-attachment: fixed;
 }
 
 header {
     position: fixed;
     top: 0;
-    left: 50%;
+    left: 0;
     z-index: 1000;
-    width: min(960px, calc(100% - 32px));
-    transform: translateX(-50%);
-    padding: 0.75rem 1.4rem 0.85rem;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 24px;
-    background: rgba(53, 35, 50, 0.78);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 18px 50px rgba(52, 32, 45, 0.22);
-    color: #fff7fb;
+    width: 100%;
+    padding: 0.9rem 1.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06)),
+        rgba(97, 73, 90, 0.32);
+    backdrop-filter: blur(24px) saturate(135%);
+    -webkit-backdrop-filter: blur(24px) saturate(135%);
+    box-shadow:
+        0 20px 45px rgba(71, 44, 59, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    color: #fff9fc;
     text-align: center;
 }
 
@@ -50,6 +63,7 @@ header h1 {
     margin: 0;
     font-size: clamp(1.55rem, 2.6vw, 2.2rem);
     letter-spacing: 0.03em;
+    text-shadow: 0 2px 10px rgba(25, 14, 22, 0.28);
 }
 
 nav {
@@ -67,11 +81,12 @@ nav a {
     font-weight: 600;
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
+    text-shadow: 0 1px 8px rgba(25, 14, 22, 0.24);
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.16);
+    background-color: rgba(255, 255, 255, 0.22);
     color: #ffd3ea;
     transform: translateY(-1px);
 }
@@ -87,6 +102,15 @@ main {
     backdrop-filter: blur(14px);
 }
 
+.minimal-page main {
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
 .work-in-progress {
     text-align: center;
     padding: 2rem;
@@ -94,6 +118,17 @@ main {
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(233, 182, 210, 0.38);
     box-shadow: 0 12px 30px rgba(143, 96, 125, 0.08);
+}
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .work-in-progress h2 {
@@ -117,15 +152,23 @@ main {
 }
 
 footer {
-    width: min(960px, calc(100% - 32px));
+    width: 100%;
     margin: auto auto 0;
     padding: 1rem 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 22px;
-    background: rgba(53, 35, 50, 0.78);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 18px 40px rgba(52, 32, 45, 0.18);
-    color: #fff7fb;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06)),
+        rgba(97, 73, 90, 0.32);
+    backdrop-filter: blur(24px) saturate(135%);
+    -webkit-backdrop-filter: blur(24px) saturate(135%);
+    box-shadow:
+        0 20px 45px rgba(71, 44, 59, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    color: #fff9fc;
     text-align: center;
 }
 
@@ -135,12 +178,17 @@ footer p {
 
 @media (max-width: 720px) {
     body {
-        padding-top: 140px;
+        padding-top: 172px;
     }
 
     main {
         padding: 1.5rem;
         border-radius: 24px;
+    }
+
+    .minimal-page main {
+        padding: 0;
+        border-radius: 0;
     }
 
     .work-in-progress {
