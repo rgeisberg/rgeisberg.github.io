@@ -43,12 +43,32 @@
             </form>
         </section>
     </main>
+    <div id="success-modal" class="modal-overlay hidden" aria-hidden="true">
+        <div class="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title">
+            <h2 id="success-title">Message Sent</h2>
+            <p>Thanks for reaching out. Your message was sent successfully.</p>
+            <button type="button" id="close-modal">Close</button>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2026 Rebecca A Geisberg</p>
     </footer>
     <script>
         const form = document.getElementById("contact-form");
         const status = document.getElementById("form-status");
+        const successModal = document.getElementById("success-modal");
+        const closeModalButton = document.getElementById("close-modal");
+
+        function openSuccessModal() {
+            successModal.classList.remove("hidden");
+            successModal.setAttribute("aria-hidden", "false");
+            closeModalButton.focus();
+        }
+
+        function closeSuccessModal() {
+            successModal.classList.add("hidden");
+            successModal.setAttribute("aria-hidden", "true");
+        }
 
         async function handleSubmit(event) {
             event.preventDefault();
@@ -71,8 +91,9 @@
 
                 if (response.ok) {
                     form.reset();
-                    status.textContent = "Thanks. Your message has been sent.";
-                    status.className = "form-status success";
+                    status.textContent = "";
+                    status.className = "form-status";
+                    openSuccessModal();
                 } else {
                     const data = await response.json();
                     if (data.errors) {
@@ -91,6 +112,17 @@
         }
 
         form.addEventListener("submit", handleSubmit);
+        closeModalButton.addEventListener("click", closeSuccessModal);
+        successModal.addEventListener("click", (event) => {
+            if (event.target === successModal) {
+                closeSuccessModal();
+            }
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !successModal.classList.contains("hidden")) {
+                closeSuccessModal();
+            }
+        });
     </script>
 </body>
 </html>

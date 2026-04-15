@@ -203,9 +203,57 @@ main {
     color: #b23a5d;
 }
 
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(45, 32, 48, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.success-modal {
+    width: min(420px, 100%);
+    padding: 2rem;
+    border: 1px solid rgba(233, 182, 210, 0.45);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 24px 70px rgba(122, 75, 108, 0.18);
+    text-align: center;
+}
+
+.success-modal h2 {
+    margin: 0 0 0.75rem;
+    color: var(--accent-deep);
+}
+
+.success-modal p {
+    margin: 0 0 1.4rem;
+    color: var(--muted);
+}
+
+.success-modal button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.35rem;
+    background: linear-gradient(135deg, var(--accent), #e77eb4);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 16px 28px rgba(213, 91, 154, 0.24);
+}
+
 footer {
     width: min(960px, calc(100% - 32px));
-    margin: auto auto 20px;
+    margin: auto auto 0;
     padding: 1rem 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 22px;

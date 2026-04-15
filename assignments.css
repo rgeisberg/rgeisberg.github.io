@@ -161,7 +161,7 @@ a.github-button:hover {
 
 footer {
     width: min(960px, calc(100% - 32px));
-    margin: auto auto 20px;
+    margin: auto auto 0;
     padding: 1rem 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 22px;
