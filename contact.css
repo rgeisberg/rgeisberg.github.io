@@ -32,10 +32,10 @@ body {
 
 header {
     position: fixed;
-    top: 14px;
+    top: 0;
     left: 50%;
     z-index: 1000;
-    width: min(1080px, calc(100% - 32px));
+    width: min(960px, calc(100% - 32px));
     transform: translateX(-50%);
     padding: 0.75rem 1.4rem 0.85rem;
     border: 1px solid rgba(255, 255, 255, 0.7);
@@ -49,7 +49,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: clamp(1.5rem, 2.6vw, 2.15rem);
+    font-size: clamp(1.55rem, 2.6vw, 2.2rem);
     letter-spacing: 0.03em;
 }
 
@@ -94,6 +94,7 @@ main {
     border-radius: 24px;
     border: 1px solid rgba(233, 182, 210, 0.38);
     background: var(--panel-strong);
+    box-shadow: 0 12px 30px rgba(143, 96, 125, 0.08);
 }
 
 .contact-info {
@@ -203,7 +204,7 @@ main {
 }
 
 footer {
-    width: min(1080px, calc(100% - 32px));
+    width: min(960px, calc(100% - 32px));
     margin: auto auto 20px;
     padding: 1rem 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.7);
