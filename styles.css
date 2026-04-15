@@ -147,10 +147,18 @@ main {
 }
 
 .education-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
     padding: 1.2rem 1.25rem;
     border-radius: 20px;
     background: linear-gradient(135deg, rgba(255, 237, 245, 0.95), rgba(255, 255, 255, 0.92));
     border: 1px solid rgba(229, 168, 198, 0.48);
+}
+
+.education-copy {
+    flex: 1;
 }
 
 .education-card h3 {
@@ -165,6 +173,13 @@ main {
 
 .education-card p:last-child {
     margin-bottom: 0;
+}
+
+.education-logo {
+    width: min(220px, 32%);
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(143, 96, 125, 0.16);
 }
 
 footer {
@@ -205,5 +220,15 @@ footer p {
 
     .info-list {
         text-align: left;
+    }
+
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .education-logo {
+        width: 100%;
+        max-width: 240px;
     }
 }
