@@ -52,6 +52,50 @@ main {
     border-radius: 5px;
 }
 
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.intro-copy h2,
+.info-section h2 {
+    margin-top: 0;
+    color: #222;
+}
+
+.info-section {
+    padding-top: 1.5rem;
+    border-top: 1px solid #e3e3e3;
+    margin-top: 1.5rem;
+}
+
+.info-list {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.info-list li {
+    margin-bottom: 0.75rem;
+}
+
+.education-card {
+    background-color: #fafafa;
+    border-left: 4px solid #f055d4;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+}
+
+.education-card h3,
+.education-card p {
+    margin: 0 0 0.5rem;
+}
+
+.education-card p:last-child {
+    margin-bottom: 0;
+}
+
 /* Footer styling */
 footer {
     background-color: #333;
@@ -79,6 +123,15 @@ footer {
         display: block;
         margin: 5px 0;
     }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-list {
+        text-align: left;
+    }
 }
 .profile-pic {
     display: block;
@@ -88,4 +141,3 @@ footer {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
