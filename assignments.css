@@ -78,7 +78,7 @@ nav a:hover {
 }
 
 main {
-    width: min(1040px, calc(100% - 32px));
+    width: min(960px, calc(100% - 32px));
     margin: 0 auto 3rem;
     padding: 2.2rem;
     background: var(--panel);
