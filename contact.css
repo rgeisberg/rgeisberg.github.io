@@ -124,6 +124,25 @@ main {
     background-color: #f055d4;
 }
 
+.contact-form button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.form-status {
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.form-status.success {
+    color: #1f7a1f;
+}
+
+.form-status.error {
+    color: #b22222;
+}
+
 /* Footer styling */
 footer {
     background-color: #333;
