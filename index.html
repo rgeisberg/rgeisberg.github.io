@@ -8,7 +8,6 @@
 </head>
 <body class="home-page">
     <header>
-        <h1>Rebecca A Geisberg</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="work-experience.html">Work Experience</a>
@@ -18,13 +17,25 @@
         </nav>
     </header>
     <main>
-        <section class="tabbed-profile" data-reveal>
+        <section class="hero-splash" data-reveal>
+            <div class="hero-copy">
+                <p class="hero-kicker">Hi, I am</p>
+                <h2>Rebecca Geisberg</h2>
+                <p class="hero-subtitle">Computer Science Student | Developer | Teaching Assistant</p>
+                <p class="hero-description">I build thoughtful web experiences, enjoy solving technical problems, and care about making complex ideas feel clear and approachable.</p>
+                <a class="hero-scroll-link" href="#home-details">Scroll to explore</a>
+            </div>
+            <div class="hero-visual">
+                <img src="/images/selfie.jpeg" alt="A picture of Rebecca Geisberg" class="hero-image">
+            </div>
+        </section>
+
+        <section class="tabbed-profile" data-reveal id="home-details">
             <div class="profile-carousel-shell" aria-label="Homepage section controls">
                 <button class="profile-arrow" type="button" aria-label="Previous section" data-carousel-direction="prev">&lt;</button>
 
                 <div class="profile-panel-stack">
                     <section class="tab-panel intro is-active" id="panel-about" role="tabpanel" data-panel-label="About Me">
-                        <img src="/images/selfie.jpeg" alt="A picture of Rebecca A Geisberg" class="profile-pic">
                         <div class="intro-copy">
                             <h2>About Me</h2>
                             <p>I am Rebecca Geisberg, a Boston University computer science student who enjoys building new projects, while simultaneously thinking about what could be better. My background includes teaching full stack web development, leading Java instruction for younger students, and extensive Machine Learning projects and mathematical background.</p>
