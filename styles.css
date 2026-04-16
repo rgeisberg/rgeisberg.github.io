@@ -42,7 +42,7 @@ body {
 
 .home-page {
     padding-top: 0;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
 header {
@@ -277,8 +277,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    padding-top: 2rem;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 3.5rem 0;
     scroll-snap-align: start;
+    background:
+        linear-gradient(180deg, rgba(255, 248, 251, 0.96), rgba(249, 243, 252, 0.96));
 }
 
 .profile-carousel-shell {
@@ -392,6 +396,11 @@ main {
     height: 2rem;
     background: linear-gradient(180deg, rgba(177, 62, 122, 0), rgba(177, 62, 122, 0.35));
     transform: translateX(-50%);
+}
+
+.home-page .profile-carousel-shell {
+    width: min(1080px, calc(100% - 48px));
+    margin: 0 auto;
 }
 
 .inline-link {
@@ -543,6 +552,15 @@ footer p {
         min-height: 100vh;
         grid-template-columns: 1fr;
         background: linear-gradient(180deg, rgba(255, 245, 249, 0.96) 0%, rgba(255, 245, 249, 0.96) 48%, rgba(193, 104, 152, 0.94) 48%, rgba(177, 62, 122, 0.96) 100%);
+    }
+
+    .tabbed-profile {
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .home-page .profile-carousel-shell {
+        width: min(100%, calc(100% - 24px));
     }
 
     .hero-splash::after {
