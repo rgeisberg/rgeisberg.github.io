@@ -274,7 +274,15 @@ main {
     padding: 3.5rem 0;
     scroll-snap-align: start;
     background:
-        linear-gradient(180deg, rgba(255, 248, 251, 0.96), rgba(249, 243, 252, 0.96));
+        linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at 12% 14%, rgba(255, 182, 213, 0.85), transparent 24%),
+        radial-gradient(circle at 84% 18%, rgba(248, 203, 224, 0.9), transparent 22%),
+        radial-gradient(circle at 70% 78%, rgba(225, 212, 255, 0.78), transparent 26%),
+        radial-gradient(circle at 28% 72%, rgba(255, 226, 236, 0.75), transparent 20%),
+        linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+    background-size: 26px 26px, 26px 26px, auto, auto, auto, auto, auto;
+    background-attachment: fixed;
 }
 
 .profile-carousel-shell {
