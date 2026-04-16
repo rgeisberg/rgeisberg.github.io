@@ -66,11 +66,17 @@ header {
 
 .modern-page header {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 1.4rem 2rem;
     border: none;
     background: transparent;
     box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    text-align: left;
 }
 
 header h1 {
@@ -108,23 +114,24 @@ nav a:hover {
 .modern-page nav {
     margin-top: 0;
     justify-content: flex-end;
-    gap: 0.35rem 1rem;
+    gap: 0.3rem 1rem;
 }
 
 .modern-page nav a {
     padding: 0.15rem 0.2rem;
     border-radius: 0;
     background: transparent;
-    color: #fff8fc;
+    color: #9f2f68;
     font-size: 0.88rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-shadow: none;
 }
 
 .modern-page nav a:hover {
     background: transparent;
-    color: #ffe1f0;
+    color: #c44c85;
     transform: none;
 }
 
@@ -330,8 +337,12 @@ footer p {
         margin-bottom: 2rem;
     }
 
+    .modern-page header {
+        padding: 1rem 1.1rem;
+    }
+
     .modern-page nav {
-        justify-content: center;
+        justify-content: flex-end;
         gap: 0.35rem 0.85rem;
     }
 

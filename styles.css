@@ -178,20 +178,13 @@ main {
     overflow: hidden;
     border: 1px solid rgba(233, 182, 210, 0.38);
     border-radius: 0;
-    background: linear-gradient(90deg, rgba(255, 245, 249, 0.96) 0%, rgba(255, 245, 249, 0.96) 54%, rgba(193, 104, 152, 0.94) 54%, rgba(177, 62, 122, 0.96) 100%);
+    background: url("/images/index-hero-panel.png") 28% center / cover no-repeat;
     box-shadow: none;
     scroll-snap-align: start;
 }
 
 .hero-splash::after {
-    content: "";
-    position: absolute;
-    top: -6%;
-    bottom: -6%;
-    left: 48%;
-    width: 150px;
-    background: rgba(255, 245, 249, 0.96);
-    transform: translateX(-50%) skewX(-9deg);
+    content: none;
 }
 
 .hero-copy,
@@ -551,7 +544,7 @@ footer p {
     .hero-splash {
         min-height: 100vh;
         grid-template-columns: 1fr;
-        background: linear-gradient(180deg, rgba(255, 245, 249, 0.96) 0%, rgba(255, 245, 249, 0.96) 48%, rgba(193, 104, 152, 0.94) 48%, rgba(177, 62, 122, 0.96) 100%);
+        background: url("/images/index-hero-panel.png") 32% center / cover no-repeat;
     }
 
     .tabbed-profile {
@@ -564,13 +557,7 @@ footer p {
     }
 
     .hero-splash::after {
-        top: 47%;
-        left: -10%;
-        right: -10%;
-        bottom: auto;
-        width: auto;
-        height: 92px;
-        transform: skewY(-6deg);
+        content: none;
     }
 
     .hero-copy {
