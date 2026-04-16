@@ -258,12 +258,11 @@ main {
 }
 
 .hero-image {
-    width: min(100%, 420px);
-    max-height: 620px;
+    width: min(100%, 460px);
+    max-height: 680px;
     object-fit: cover;
     object-position: center top;
     border-radius: 36px 36px 0 0;
-    box-shadow: 0 28px 48px rgba(77, 31, 57, 0.22);
 }
 
 .tabbed-profile {
@@ -583,8 +582,8 @@ footer p {
     }
 
     .hero-image {
-        width: min(100%, 320px);
-        max-height: 420px;
+        width: min(100%, 340px);
+        max-height: 460px;
     }
 
     .profile-carousel-shell {
