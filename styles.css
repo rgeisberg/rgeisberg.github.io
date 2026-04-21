@@ -545,6 +545,7 @@ footer p {
     }
 
     .home-page nav a {
+        color: var(--accent-deep);
         font-size: 0.76rem;
     }
 
